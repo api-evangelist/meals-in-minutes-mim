@@ -1,8 +1,17 @@
 aid: meals-in-minutes-mim
 name: Meals In Minutes, MIM
-description: Meals In Minutes, MIM is a company surfaced as a portfolio company of 500-global and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Meals In Minutes (MIM) is a direct-to-consumer healthy meal company that sells
+  portioned, prepped, vacuum-packed meal components — mix-and-match proteins, bases,
+  and sides — delivered to the customer's door. The storefront at mealsinminutes.co
+  runs on Shopify and is backed by 500 Global. While MIM publishes no bespoke
+  developer API, its Shopify store natively exposes an agent-commerce surface: a
+  Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp, a hosted
+  MCP endpoint at /api/ucp/mcp for buyer-approved agent checkout, Shopify Customer
+  Accounts OpenID Connect (with a customer-account-mcp-api scope), a published
+  /llms.txt and /agents.md with agent instructions, and the standard Shopify
+  storefront product/collection JSON endpoints. This profile captures that
+  agent-facing surface for the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/meals-in-minutes-mim/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +19,31 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://mealsinminutes.co/cdn/shop/files/banner_1.png?v=1762865371
 tags:
 - Company
+- Food and Beverage
+- Meal Delivery
+- E-Commerce
+- Direct to Consumer
+- Shopify
+- Agentic Commerce
+- Universal Commerce Protocol
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +53,39 @@ maintainers:
 common:
 - type: Website
   url: https://mealsinminutes.co
+- type: Blog
+  url: https://mealsinminutes.co/blogs/news
+- type: Support
+  url: https://mealsinminutes.co/pages/contact
+- type: Login
+  url: https://mealsinminutes.co/account/login
+- type: SignUp
+  url: https://mealsinminutes.co/account/register
+- type: PrivacyPolicy
+  url: https://mealsinminutes.co/policies/privacy-policy
+- type: TermsOfService
+  url: https://mealsinminutes.co/policies/terms-of-service
+- type: MCPServer
+  name: Meals In Minutes UCP MCP
+  url: mcp/meals-in-minutes-mim-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/meals-in-minutes-mim-llms.txt
+- type: WellKnown
+  url: well-known/meals-in-minutes-mim-well-known.yml
+- type: Authentication
+  url: authentication/meals-in-minutes-mim-authentication.yml
+- type: OpenIDConnect
+  url: well-known/meals-in-minutes-mim-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/meals-in-minutes-mim-scopes.yml
+- type: Conformance
+  url: conformance/meals-in-minutes-mim-conformance.yml
+- type: DomainSecurity
+  url: security/meals-in-minutes-mim-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
