@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://mealsinminutes.co/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+summary:
+  types: [openIdConnect, oauth2]
+  oauth2_flows: [authorizationCode]
+  pkce: true
+  notes: >-
+    Shopify Customer Accounts OpenID Connect. Buyer/customer authentication only —
+    the storefront ships no independent developer API key program. Agent commerce
+    via the UCP MCP endpoint is buyer-approval gated, not API-key gated.
+schemes:
+- name: shopify-customer-accounts-oidc
+  type: openIdConnect
+  issuer: https://shopify.com/authentication/93906960748
+  openIdConnectUrl: https://mealsinminutes.co/.well-known/openid-configuration
+  authorization_endpoint: https://account.mealsinminutes.co/authentication/oauth/authorize
+  token_endpoint: https://account.mealsinminutes.co/authentication/oauth/token
+  end_session_endpoint: https://account.mealsinminutes.co/authentication/logout
+  jwks_uri: https://account.mealsinminutes.co/authentication/.well-known/jwks.json
+  response_types: [code]
+  grant_types:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  token_endpoint_auth_methods: [client_secret_basic]
+  id_token_signing_alg: [RS256]
+  code_challenge_methods: [S256]
+  sources: [well-known/meals-in-minutes-mim-openid-configuration.json]

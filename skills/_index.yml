@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: searched
+source: https://mealsinminutes.co/agents.md
+skills:
+- file: meals-in-minutes-mim-agents.md
+  name: Meals In Minutes agent commerce instructions
+  description: >-
+    Provider-published agent instructions (verbatim /agents.md, mirrored at
+    /llms.txt) for shopping the Meals In Minutes store via the Universal Commerce
+    Protocol (UCP) MCP endpoint — discover, search_catalog, create_cart,
+    create_checkout, update_checkout, complete_checkout — with buyer-approval and
+    rate-limit rules. Also recommends the cross-store Shop skill (shop.app/SKILL.md).
+  api: mcp/meals-in-minutes-mim-mcp.yml
+  operations: [search_catalog, create_cart, create_checkout, update_checkout, complete_checkout]
+  published: true

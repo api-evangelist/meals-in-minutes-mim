@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: live fetch of https://mealsinminutes.co/.well-known/*
+host: https://mealsinminutes.co
+documents:
+- path: /.well-known/openid-configuration       # OIDC discovery (Shopify customer accounts)
+  status: 200
+  file: meals-in-minutes-mim-openid-configuration.json
+- path: /.well-known/ucp                          # Universal Commerce Protocol merchant profile
+  status: 200
+  file: meals-in-minutes-mim-ucp.json
+- path: /.well-known/security.txt                 # RFC 9116
+  status: 404
+- path: /.well-known/oauth-authorization-server   # RFC 8414
+  status: 404
+- path: /.well-known/api-catalog                  # RFC 9727
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+notes: >-
+  Storefront runs on Shopify (myshopify host meals-in-minutes-my.myshopify.com). The
+  openid-configuration is Shopify Customer Accounts OIDC; scopes include
+  customer-account-mcp-api:full. /.well-known/ucp advertises a native Universal
+  Commerce Protocol (UCP) agent-commerce surface with an MCP transport endpoint.

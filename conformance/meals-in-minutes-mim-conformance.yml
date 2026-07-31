@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://mealsinminutes.co/.well-known/openid-configuration,
+  https://mealsinminutes.co/.well-known/ucp,
+  https://mealsinminutes.co/llms.txt
+standards:
+- id: openid-connect
+  conforms: true
+  evidence: /.well-known/openid-configuration present with RS256 id tokens and PKCE (S256)
+- id: oauth2
+  conforms: true
+  evidence: authorization_code + refresh_token grants, client_secret_basic token auth
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256
+- id: universal-commerce-protocol
+  conforms: true
+  evidence: /.well-known/ucp advertises UCP versions 2026-04-08 and 2026-01-23
+- id: model-context-protocol
+  conforms: true
+  evidence: UCP MCP transport endpoint at /api/ucp/mcp (JSON-RPC tools/list)
+- id: llms-txt
+  conforms: true
+  evidence: /llms.txt published with agent instructions
+- id: rfc9457-problem-details
+  conforms: false
+- id: fhir-r4
+  conforms: false

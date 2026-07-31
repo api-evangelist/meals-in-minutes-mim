@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://mealsinminutes.co/.well-known/ucp
+description: >-
+  Meals In Minutes runs on Shopify and natively exposes a Universal Commerce
+  Protocol (UCP) agent-commerce surface. A hosted MCP server accepts JSON-RPC
+  POSTs at https://mealsinminutes.co/api/ucp/mcp (Content-Type application/json);
+  agents call tools/list to discover the tool schemas after presenting a UCP agent
+  profile. The store advertises supported UCP versions 2026-04-08 (latest) and
+  2026-01-23. Checkout requires contemporaneous human buyer approval; the endpoint
+  is rate-limited per IP (back off on 429). This is a platform-provided (Shopify
+  UCP) surface, live on the merchant's own domain — not a bespoke first-party API.
+server:
+  name: meals-in-minutes-mim-ucp
+  transport: http
+  url: https://mealsinminutes.co/api/ucp/mcp
+  discovery: https://mealsinminutes.co/.well-known/ucp
+  protocol: Universal Commerce Protocol (UCP)
+  protocol_spec: https://ucp.dev
+  supported_versions:
+  - '2026-04-08'
+  - '2026-01-23'
+  openrpc_schema: https://ucp.dev/2026-04-08/services/shopping/mcp.openrpc.json
+# UCP shopping tool surface, as documented in the store's /llms.txt agent flow.
+# tools/list requires an agent profile URI; captured from the published agent
+# instructions and UCP shopping service rather than fabricated.
+tools:
+- name: search_catalog
+  description: Find products matching the buyer's intent (catalog search).
+- name: create_cart
+  description: Create a cart and add desired items.
+- name: create_checkout
+  description: Start the purchase flow from a cart.
+- name: update_checkout
+  description: Set shipping address and delivery method on a checkout.
+- name: complete_checkout
+  description: Finalize the purchase (buyer must approve payment).

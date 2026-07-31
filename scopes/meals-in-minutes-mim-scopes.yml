@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://mealsinminutes.co/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+schemes:
+- name: shopify-customer-accounts-oidc
+  source: well-known/meals-in-minutes-mim-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://account.mealsinminutes.co/authentication/oauth/authorize
+    tokenUrl: https://account.mealsinminutes.co/authentication/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token for the customer.
+  flows: [authorizationCode]
+- scope: email
+  description: Access to the customer's email address claim.
+  flows: [authorizationCode]
+- scope: customer-account-api:full
+  description: Full access to the Shopify Customer Account API for the signed-in buyer.
+  flows: [authorizationCode]
+- scope: customer-account-mcp-api:full
+  description: >-
+    Full access to the Customer Account MCP API — enables agent-driven commerce
+    (UCP MCP) actions on behalf of the authenticated buyer.
+  flows: [authorizationCode]
