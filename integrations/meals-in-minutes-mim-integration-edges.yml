@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/meals-in-minutes-mim/integrations
+- https://n8n.io/integrations/meals-in-minutes-mim/
+- https://composio.dev/toolkits/meals-in-minutes-mim
+- https://monid.ai/tools/meals-in-minutes-mim
+checked:
+- https://composio.dev/toolkits/meals-in-minutes-mim
+- https://monid.ai/tools/meals-in-minutes-mim
+- https://n8n.io/integrations/meals-in-minutes-mim/
+- https://zapier.com/apps/meals-in-minutes-mim/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
