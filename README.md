@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Meals In Minutes, MIM is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Meals In Minutes (MIM) is a direct-to-consumer healthy meal company that sells portioned, prepped, vacuum-packed meal components — mix-and-match proteins, bases, and sides — delivered to the customer's door. The storefront at mealsinminutes.co runs on Shopify and is backed by 500 Global. While MIM publishes no bespoke developer API, its Shopify store natively exposes an agent-commerce surface: a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp, a hosted MCP endpoint at /api/ucp/mcp for buyer-approved agent checkout, Shopify Customer Accounts OpenID Connect (with a customer-account-mcp-api scope), a published /llms.txt and /agents.md with agent instructions, and the standard Shopify storefront product/collection JSON endpoints. This profile captures that agent-facing surface for the API Evangelist network.
 
-Backed by: 500-global — https://mealsinminutes.co
+**Areas:** Company · Food and Beverage · Meal Delivery · E-Commerce · Direct to Consumer · Shopify · Agentic Commerce · Universal Commerce Protocol
+
+## Meals In Minutes, MIM on APIs.io
+
+Everything profiled for Meals In Minutes, MIM is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/meals-in-minutes-mim/](https://apis.io/providers/meals-in-minutes-mim/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [meals-in-minutes-mim-ucp](https://apis.io/servers/meals-in-minutes-mim/meals-in-minutes-mim-ucp/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Meals In Minutes Mim Authentication](https://apis.io/security/meals-in-minutes-mim/meals-in-minutes-mim-authentication/)
+- [Meals In Minutes Mim Domain Security](https://apis.io/security/meals-in-minutes-mim/meals-in-minutes-mim-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Meals In Minutes Mim Scopes](https://apis.io/scopes/meals-in-minutes-mim/meals-in-minutes-mim-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mealsinminutes.co)
+- [Sign up](https://mealsinminutes.co/account/register)
+- [Support](https://mealsinminutes.co/pages/contact)
+- [Blog](https://mealsinminutes.co/blogs/news)
+- [Terms of service](https://mealsinminutes.co/policies/terms-of-service)
+- [Privacy policy](https://mealsinminutes.co/policies/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 23.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 17.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | platform (partial credit) |
+
+**Regulatory alignment 34.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/meals-in-minutes-mim/](https://apis.io/providers/meals-in-minutes-mim/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Meals In Minutes, MIM: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/meals-in-minutes-mim/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
